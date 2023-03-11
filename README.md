@@ -2,5 +2,5 @@
 This repository is the detailed explanation and code for spelling auto correction using NLP.
 
 We are going to use two methods for spelling correction. Each method takes a list of misspelled words and gives the suggestion of the correct word for each incorrect word. It tries to find a word in the list of correct spellings that has the shortest distance and the same initial letter as the misspelled word. It then returns the word which matches the given criteria. The methods can be differentiated on the basis of the distance measure they use to find the closest word.  ‘words’ package from nltk is used as the dictionary of correct words.
-### Method 1: Using Jaccard distance Method
+## Method 1: Using Jaccard distance Method
 Jaccard distance, the opposite of the Jaccard coefficient, is used to measure the dissimilarity between two sample sets. We get Jaccard distance by subtracting the Jaccard coefficient from 1. We can also get it by dividing the difference between the sizes of the union and the intersection of two sets by the size of the union. We work with Q-grams (these are equivalent to N-grams) which are referred to as characters instead of tokens. Jaccard Distance is given by the following formula.
