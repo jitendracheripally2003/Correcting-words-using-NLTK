@@ -1,6 +1,14 @@
 # Correcting Words using NLTK in python
 This repository is the detailed explanation and code for spelling auto correction using NLP.
-
-We are going to use two methods for spelling correction. Each method takes a list of misspelled words and gives the suggestion of the correct word for each incorrect word. It tries to find a word in the list of correct spellings that has the shortest distance and the same initial letter as the misspelled word. It then returns the word which matches the given criteria. The methods can be differentiated on the basis of the distance measure they use to find the closest word.  ‘words’ package from nltk is used as the dictionary of correct words.
+For spelling correction, we're going to employ two strategies. Each technique uses a list of misspelled words and suggests a replacement term for each mistaken word. It looks for a word with the same initial letter as the misspelled word that is closest to it in the list of accurate spellings. The word that meets the specified parameters is then returned. On the premise of the distance metric they employ to identify the closest word, the methods can be distinguished.  The dictionary of appropriate terms is provided by the nltk package "words".
 ## Method 1: Using Jaccard distance Method
-Jaccard distance, the opposite of the Jaccard coefficient, is used to measure the dissimilarity between two sample sets. We get Jaccard distance by subtracting the Jaccard coefficient from 1. We can also get it by dividing the difference between the sizes of the union and the intersection of two sets by the size of the union. We work with Q-grams (these are equivalent to N-grams) which are referred to as characters instead of tokens. Jaccard Distance is given by the following formula.
+The Jaccard distance, which measures the dissimilarity between two sample groups, is the opposite of the Jaccard coefficient. By deducting the Jaccard parameter from 1, we can calculate the Jaccard distance. We can also obtain it by multiplying the union's size by the ratio of the sizes of the overlap of the two sets. Instead of using tokens, we use Q-grams, which are equal to N-grams and are referred to as characters. The following formula yields the Jaccard Distance.
+
+**Dj(A,B) = 1 - J(A,B)  = (|AB| - |AB|)/|AB|**
+
+### Step 1:
+We import nltk, jaccard distance and ngrams.
+We also download the 'words' resource from nltk downloads and assign it to crt_wrds.
+
+### Step 2:
+We define a function auto_crt() in which we calculate the Jaccard distance of the incorrect word with each correct spelling word having the same initial letter in the form of [bigrams of characters](https://www.geeksforgeeks.org/python-bigram-formation-from-given-list/). We then sort them in ascending order so the shortest distance is on top and extract the word corresponding to it and print it.
