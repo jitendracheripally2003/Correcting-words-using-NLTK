@@ -35,7 +35,7 @@ Edit Distance measures dissimilarity between two strings by finding the minimum 
 
 ### Importing and Downloading:
 Import `nltk` and `edit_distance`.
-We also download the `words` resource from `nltk.downloads` and assign it to crt_wrds.
+We also download the `words` resource from `nltk.downloads` and assign it to `crt_wrds`.
 
 ### Calculating:
 Define a function `auto_crt()` in which we calculate the Edit distance of the incorrect word with each correct spelling word having the same initial letter. We then sort them in ascending order so the shortest distance is on top and extract the word corresponding to it and retrun it.
